@@ -1,0 +1,7 @@
+<div class="item-container">
+    <span class="item-name">{{field.fieldSettings.name}}</span>
+    <span class="item-value" [ngClass]="{'-green': field.fieldSettings.color && field.v > 1, '-red': field.fieldSettings.color && field.v < 0}">
+        {{field.v | currency: 'usd': ''}} {{field.fieldSettings.symbol}}
+    </span>
+    <span class="item-date">{{ field.fieldSettings.date ? (field.d | date: 'shortDate') : field.fieldSettings.time ? (field.d | date: 'shortTime') : '' }}</span>
+</div>  

@@ -1,0 +1,23 @@
+<h3>Key data</h3>
+<div class="dashboard-container">
+    <ng-container *ngIf="(!isLoading && quotes.length > 0); else skeleton">
+        <ng-container *ngFor="let quote of quotes">
+            <app-market-dashboard-group 
+                *ngFor="let group of quote.fieldGroups; index as i"
+                [group]="group"
+                [noBorder]="i === (quote.fieldGroups.length - 1)"
+            ></app-market-dashboard-group>
+        </ng-container>
+    </ng-container>
+</div>
+
+<ng-template #skeleton>
+    <div class="skeleton-container">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+</ng-template>

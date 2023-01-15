@@ -1,0 +1,33 @@
+.dashboard-container {
+    height: fit-content;
+    width: 100%;
+    background-color: #FFF;
+    border-radius: 8px;
+    border: solid 1px #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    .skeleton-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        p {
+            height: 20px;
+            margin: 10px;
+            background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+            border-radius: 5px;
+            background-size: 200% 100%;
+            animation: 1.5s skeleton linear infinite;
+        }
+    }
+        
+    
+    @keyframes skeleton {
+        to {
+          background-position-x: -200%;
+        }
+    }
+      
+}
